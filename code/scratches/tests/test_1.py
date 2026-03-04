@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     eqs = [
         "3*dx1*y1 + 6*(1/2+1/2*z1)*(2/3-1/3*u1)*x1",
-        "y1 - x1"
+        "y1 - dx1"
     ]
 
 
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     )
 
     assert stable == False, "Expected the system to be unstable based on the eigenvalues."
-    assert round(margin, 3) == None, f"Expected the maximum real part of eigenvalues to be 0.250 (check). Got {margin:.3f} instead."
+    assert round(margin, 3) == 0.400, f"Expected the maximum real part of eigenvalues to be 0.4 (check). Got {margin:.3f} instead."
